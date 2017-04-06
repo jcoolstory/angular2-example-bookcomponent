@@ -1,17 +1,16 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { BookComponent } from './book.component';
-import { BookImageComponent } from './book-image.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TextSizeDirective } from './text-size.directive';
-import { TextColorDirective } from './text-color.directive';                    
-
-
+import { BookService }   from './book.service';
+import './rxjs-extension';
 @NgModule({
-  imports:      [ BrowserModule,FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, BookComponent,BookImageComponent, TextSizeDirective, TextColorDirective ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule, HttpModule ],
+  declarations: [ AppComponent, BookComponent],
+  bootstrap:    [ AppComponent ],
+  providers:    [ BookService ],
 })
 export class AppModule { }
