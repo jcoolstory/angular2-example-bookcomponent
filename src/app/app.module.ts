@@ -5,12 +5,10 @@ import { HttpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { BookComponent } from './book.component';
-import { BookService }   from './book.service';
-import './rxjs-extension';
+import { CustModule }    from './cust/cust.module';
 @NgModule({
-  imports:      [ BrowserModule, HttpModule ],
+  imports:      [ BrowserModule, CustModule ],
   declarations: [ AppComponent, BookComponent],
   bootstrap:    [ AppComponent ],
-  providers:    [ BookService ],
 })
 export class AppModule { }
