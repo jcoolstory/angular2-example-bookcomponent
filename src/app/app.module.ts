@@ -1,14 +1,12 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
-import { HttpModule }    from '@angular/http';
-
+import { routing }       from './app.routing';
 import { AppComponent }  from './app.component';
+import { BooksComponent }from './books.component';
 import { BookComponent } from './book.component';
-import { CustModule }    from './cust/cust.module';
 @NgModule({
-  imports:      [ BrowserModule, CustModule ],
-  declarations: [ AppComponent, BookComponent],
+  imports:      [ BrowserModule, routing ],
+  declarations: [ AppComponent, BookComponent, BooksComponent],
   bootstrap:    [ AppComponent ],
 })
 export class AppModule { }
